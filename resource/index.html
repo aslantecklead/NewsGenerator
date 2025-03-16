@@ -1,0 +1,96 @@
+<html>
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css" rel="stylesheet"/>
+<style>
+        @import url("https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap");
+        @page { size: A4 }
+        .sheet {
+            padding-inline: 10mm;
+            padding-top: 5mm;
+            background-size: 0.25rem 0.25rem;
+        }
+        figure {
+            width: max(50%, 350px);
+            float: right;
+            padding: 0 1rem;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 0 300px black;
+        }
+        p {
+            font-size: 20px;
+            margin: 0 0 25px;
+            line-height: 1.5rem;
+            padding: 0 1.5rem;
+            font-family: "Noticia Text", serif;
+            text-indent: 1.5em;
+        }
+        .news_image {
+            width: 100%;
+            filter: grayscale(1) contrast(0.75);
+        }
+        .about {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        div.divider.divider-dotted {
+            height: 15px;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABlBMVEX///+QkJApn3LQAAAAAnRSTlMAgJsrThgAAAAOSURBVHheYwCCUAdcJAAnnALqo5TBzAAAAABJRU5ErkJggg==) repeat-x center;
+        }
+        h2 {
+            background: gray;
+            color: white;
+            font-size: 1.5rem;
+            column-span: all;
+            padding: 1rem;
+            width: fit-content;
+            max-width: 85%;
+        }
+        .info-container {
+            position: absolute;
+            margin-left: 20px;
+            color: gray;
+        }
+        .info-container .time {
+            margin-top: 5px;
+        }
+        div.divider {
+            margin: 110px 0;
+            position: relative;
+            display: block;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body class="A4">
+<section class="sheet">
+<div class="about">
+<h1>Новости РОСГVАРДИИ!</h1>
+<img src="https://rosguard.gov.ru/static/images/main/rosgvard_logo.png" style="width: 60px; height: 60px; padding-inline: 450px; padding-top: 20px;"/>
+</div>
+<h2 class="title" src="https://rosguard.gov.ru/uploads/2025/03/5366268342081546572_small.jpg">Военнослужащие Росгвардии и сотрудники ФСБ России пресекли незаконный оборот боеприпасов в ДНР </h2>
+<figure>
+<img class="news_image" src="https://rosguard.gov.ru/uploads/2025/03/banner_188_small.jpg"/>
+</figure>
+<div>
+<p class="text_body">Военнослужащие Росгвардии совместно с сотрудниками военной контрразведки при проведении разведывательно-поисковых мероприятий обнаружили боеприпасы в лесополосе рядом с одним из населенных пунктов Донецкой Народной Республики.
+Сапёр и кинолог ведомства вместе со служебной собакой провели тщательное обследование территории. В результате выявлено три участка местности, на которых находилось тридцать 120-мм снарядов, три миномётные мины, два выстрела к ручному противотанковому гранатомёту и пороховой заряд.
+Росгвардейцы идентифицировали опасные находки, после чего передали их следственно-оперативной группе. Обезвреженный арсенал представлял угрозу мирным гражданам и мог использоваться противником для совершения диверсий.
+
+
+</p>
+<p class="text_body">
+                Операция проводилась в рамках мероприятий по противодействию экстремизму и терроризму. Все изъятые материалы будут тщательно изучены, после чего будет принято решение о дальнейших действиях.
+            </p>
+</div>
+<div class="info-container">
+<div class="divider divider-dotted"></div>
+<span class="copyright">Источник: Пресс-служба Росгвардии</span>
+<div class="time">⏱︎ 16 марта 2025, 09:14</div>
+</div>
+</section>
+</body>
+</html>
