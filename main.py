@@ -8,10 +8,9 @@ import requests
 from fastapi import FastAPI
 import threading
 import asyncio
-import backend
+import news_parser
 
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardRemove
-
 app = FastAPI()
 
 bot = telebot.TeleBot('7910784059:AAHT9D9fz1FwEQoZTYoMVHCRBnpiTjv6YkI')
@@ -106,7 +105,7 @@ def generate_document(user_id):
     if selected_news:
         bot.send_message(user_id, f"Генерация документа для новости: {selected_news['title']}")
         url = selected_news['link']
-        backend.parse_news(url, user_id)
+        news_parser.parse_news(url, user_id)
     else:
         bot.send_message(user_id, "Новость не найдена. Попробуйте ещё раз.")
 

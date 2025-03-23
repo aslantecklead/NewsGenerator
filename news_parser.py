@@ -1,15 +1,12 @@
 import random
-
 import bs4
 from bs4 import BeautifulSoup
 import requests
-from pygments.lexers import html
 import os
-import re
 import main
+from pdf_generator import generatePdfFile
 
 last_news = []
-page_str = ''
 
 def trim_text_to_words(text, max_words):
     words = text.split()
@@ -30,43 +27,26 @@ def trim_text_to_words(text, max_words):
     return trimmed_text
 
 def edit_file(current_news, user_id):
-    with open('resource/index.html', 'r', encoding='utf-8') as inf:
-        markup = inf.read()
-        soup = bs4.BeautifulSoup(markup, 'lxml')
+    new_title = current_news[0]['title']
+    if '(видео)' in new_title:
+        new_title = new_title.replace('(видео)', '')
 
-        old_title_tag = soup.find("h2")
-        new_title = current_news[0]['title']
-        if '(видео)' in new_title:
-            new_title = new_title.replace('(видео)', '')
-        old_title_tag.string = new_title
+    new_body = current_news[0]['text']
+    new_body = trim_text_to_words(new_body, 150)
 
-        old_body_tag = soup.find("p")
-        new_body = current_news[0]['text']
-        new_body = trim_text_to_words(new_body, 180)
-        old_body_tag.string = new_body
+    new_url = last_news[0]['image_url']
+    new_timestamp = current_news[0]['publication_timestamp']
+    new_source = last_news[0]['source']
 
-        old_url_tag = soup.find("img", class_="news_image")
-        if old_url_tag:
-            new_url = last_news[0]['image_url']
-            old_url_tag["src"] = new_url
-
-        old_timestamp_tag = soup.find("div", class_="time")
-        new_timestamp = current_news[0]['publication_timestamp']
-        new_tag = soup.new_tag("div", attrs={"class": "time"})
-        new_tag.string = '⏱︎ ' + new_timestamp
-
-        if old_timestamp_tag:
-            old_timestamp_tag.replace_with(new_tag)
-
-        old_source = soup.find("span", class_="copyright")
-        if old_source:
-            new_source = last_news[0]['source']
-            old_source.string = 'Источник: ' + new_source
-
-        with open('resource/index.html', 'w', encoding='utf-8') as outf:
-            outf.write(str(soup))
-
-        # main.bot.send_message(user_id, str(soup))
+    # Передаем данные о новости в функцию generatePdfFile
+    generatePdfFile(
+        title=new_title,
+        body=new_body,
+        image_url=new_url,
+        timestamp=new_timestamp,
+        source=new_source,
+        user_id=user_id
+    )
 
 def parse_news(url, user_id):
     headers = {
