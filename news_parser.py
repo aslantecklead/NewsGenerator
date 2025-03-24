@@ -38,7 +38,6 @@ def edit_file(current_news, user_id):
     new_timestamp = current_news[0]['publication_timestamp']
     new_source = last_news[0]['source']
 
-    # Передаем данные о новости в функцию generatePdfFile
     generatePdfFile(
         title=new_title,
         body=new_body,

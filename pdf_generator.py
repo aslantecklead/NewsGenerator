@@ -1,7 +1,9 @@
 import os
+import glob
 import requests
 import random
 import hashlib
+from datetime import datetime
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -11,6 +13,7 @@ from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import main
+import smpt_client
 
 user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
@@ -18,10 +21,13 @@ user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0"
 ]
 
+# Initialize fonts
 pdfmetrics.registerFont(TTFont('Gidole-Regular', 'fonts/Gidole-Regular.ttf'))
+
 
 def get_cached_filename(url):
     return hashlib.md5(url.encode()).hexdigest() + ".jpg"
+
 
 def download_image(url, save_path):
     try:
@@ -38,20 +44,48 @@ def download_image(url, save_path):
         print(f"Ошибка при загрузке изображения: {e}")
         return False
 
+
+def cleanup_old_files(user_id, max_files=3):
+    files = glob.glob(f"pdf_files/news_{user_id}_*.pdf")
+    files.sort(key=os.path.getmtime, reverse=True)
+
+    for old_file in files[max_files:]:
+        try:
+            os.remove(old_file)
+            print(f"Удален старый файл: {old_file}")
+        except Exception as e:
+            print(f"Ошибка при удалении файла {old_file}: {e}")
+
+
 def generatePdfFile(title, body, image_url, timestamp, source, user_id):
-    pdf_filename = f"pdf_files/news_{user_id}.pdf"  # Уникальное имя файла для каждого пользователя
-    doc = SimpleDocTemplate(pdf_filename, pagesize=A4, rightMargin=10*mm, leftMargin=10*mm, topMargin=5*mm)
+    os.makedirs("pdf_files", exist_ok=True)
+    os.makedirs("image_cache", exist_ok=True)
+
+    current_date = datetime.now().strftime("%d_%m_%Y")
+    formatted_date = datetime.now().strftime("%d %B %Y года").replace("January", "января").replace("February",
+                                                                                                   "февраля") \
+        .replace("March", "марта").replace("April", "апреля").replace("May", "мая").replace("June", "июня") \
+        .replace("July", "июля").replace("August", "августа").replace("September", "сентября") \
+        .replace("October", "октября").replace("November", "ноября").replace("December", "декабря")
+
+    pdf_filename = f"pdf_files/news_{user_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+
+    doc = SimpleDocTemplate(pdf_filename, pagesize=A4, rightMargin=10 * mm, leftMargin=10 * mm, topMargin=5 * mm)
 
     styles = getSampleStyleSheet()
 
     if 'CustomTitle' not in styles:
-        styles.add(ParagraphStyle(name='CustomTitle', alignment=TA_LEFT, fontSize=24, leading=30, fontName='Gidole-Regular', textColor=colors.black))
+        styles.add(ParagraphStyle(name='CustomTitle', alignment=TA_LEFT, fontSize=24, leading=30,
+                                  fontName='Gidole-Regular', textColor=colors.black))
     if 'CustomSubtitle' not in styles:
-        styles.add(ParagraphStyle(name='CustomSubtitle', alignment=TA_CENTER, fontSize=18, leading=22, fontName='Gidole-Regular', textColor=colors.white))
+        styles.add(ParagraphStyle(name='CustomSubtitle', alignment=TA_CENTER, fontSize=18, leading=22,
+                                  fontName='Gidole-Regular', textColor=colors.white))
     if 'Justify' not in styles:
-        styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY, fontSize=12, leading=15, fontName='Gidole-Regular', textColor=colors.black))
+        styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY, fontSize=12, leading=15,
+                                  fontName='Gidole-Regular', textColor=colors.black))
     if 'Info' not in styles:
-        styles.add(ParagraphStyle(name='Info', alignment=TA_JUSTIFY, fontSize=10, leading=12, fontName='Gidole-Regular', textColor=colors.grey))
+        styles.add(ParagraphStyle(name='Info', alignment=TA_JUSTIFY, fontSize=10, leading=12,
+                                  fontName='Gidole-Regular', textColor=colors.grey))
 
     content = []
 
@@ -92,7 +126,7 @@ def generatePdfFile(title, body, image_url, timestamp, source, user_id):
         download_image(image_url, news_image_path)
 
     if os.path.exists(news_image_path):
-        content.append(Spacer(1, 12))  # Верхний отступ для фото
+        content.append(Spacer(1, 12))
         news_image = Image(news_image_path, width=400, height=200)
         news_image.hAlign = 'CENTER'
         content.append(news_image)
@@ -113,6 +147,12 @@ def generatePdfFile(title, body, image_url, timestamp, source, user_id):
 
     doc.build(content)
     print(f"PDF-документ '{pdf_filename}' успешно создан!")
+
+    cleanup_old_files(user_id, max_files=3)
+
     main.bot.send_message(user_id, "PDF успешно создан, сейчас вышлем, оцените:")
     main.bot.send_document(user_id, open(pdf_filename, "rb"))
-    
+
+    email_subject = f"Новости на {formatted_date}"
+
+    smpt_client.send_file(user_id, pdf_filename, email_subject, title)
