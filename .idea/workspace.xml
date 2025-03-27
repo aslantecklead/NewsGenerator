@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="tg bot ui">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="max files limitation">
+      <change afterPath="$PROJECT_DIR$/image_cache/2d3ccf95369e2baf62370dc770f510d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_cache/ad6305ddffc19a030d5ed723ec91fdef.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf_files/news_730680190_20250327_111855.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf_files/news_730680190_20250327_111911.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_cache/21455672ccfb11070d86cfc19154db99.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/image_cache/8ce4c776522c2b50cd7bda18abcfe682.jpg" beforeDir="false" />
@@ -17,8 +21,6 @@
       <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_131644.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_132034.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_132237.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smpt_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/smpt_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +41,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;aslantecklead&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;aslantecklead&quot;
   }
 }</component>
@@ -68,7 +74,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "tests",
     "last_opened_file_path": "C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -148,7 +154,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -202,7 +210,8 @@
       <workItem from="1742742736698" duration="4107000" />
       <workItem from="1742807256619" duration="2580000" />
       <workItem from="1743002154490" duration="824000" />
-      <workItem from="1743054265084" duration="4135000" />
+      <workItem from="1743054265084" duration="4299000" />
+      <workItem from="1743065314450" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="tg bot ui">
       <option name="closed" value="true" />
@@ -220,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741099173217</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="max files limitation">
+      <option name="closed" value="true" />
+      <created>1743063783975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743063783975</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +256,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tg bot ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="tg bot ui" />
+    <MESSAGE value="max files limitation" />
+    <option name="LAST_COMMIT_MESSAGE" value="max files limitation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1743063620711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
