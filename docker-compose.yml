@@ -1,0 +1,7 @@
+services:
+  backend:
+    image: news:latest
+    container_name: news
+    ports:
+      - "80:8000"
+    command: "python main.py"
