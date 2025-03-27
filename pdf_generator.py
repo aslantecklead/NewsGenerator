@@ -21,7 +21,6 @@ user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0"
 ]
 
-# Initialize fonts
 pdfmetrics.registerFont(TTFont('Gidole-Regular', 'fonts/Gidole-Regular.ttf'))
 
 
@@ -45,16 +44,25 @@ def download_image(url, save_path):
         return False
 
 
-def cleanup_old_files(user_id, max_files=3):
-    files = glob.glob(f"pdf_files/news_{user_id}_*.pdf")
-    files.sort(key=os.path.getmtime, reverse=True)
+def cleanup_old_files(user_id, max_pdf_files=2, max_images=5):
+    pdf_files = glob.glob(f"pdf_files/news_{user_id}_*.pdf")
+    pdf_files.sort(key=os.path.getmtime, reverse=True)
 
-    for old_file in files[max_files:]:
+    for old_file in pdf_files[max_pdf_files:]:
         try:
             os.remove(old_file)
-            print(f"Удален старый файл: {old_file}")
         except Exception as e:
-            print(f"Ошибка при удалении файла {old_file}: {e}")
+            print(f"Ошибка при удалении PDF файла {old_file}: {e}")
+
+    image_files = glob.glob("image_cache/*.jpg")
+    image_files.sort(key=os.path.getmtime, reverse=True)
+
+    for old_image in image_files[max_images:]:
+        try:
+            if "rosgvard_logo" not in old_image:
+                os.remove(old_image)
+        except Exception as e:
+            print(f"Ошибка при удалении изображения {old_image}: {e}")
 
 
 def generatePdfFile(title, body, image_url, timestamp, source, user_id):
@@ -101,7 +109,7 @@ def generatePdfFile(title, body, image_url, timestamp, source, user_id):
     else:
         logo = None
 
-    title_text = Paragraph("Новости РОСГВАРДИИ!", styles['CustomTitle'])
+    title_text = Paragraph("Новости РОСГVАРДИИ!", styles['CustomTitle'])
     table_data = [[title_text, logo]]
     table = Table(table_data, colWidths=[doc.width * 0.7, doc.width * 0.3])
     table.setStyle(TableStyle([
@@ -148,7 +156,7 @@ def generatePdfFile(title, body, image_url, timestamp, source, user_id):
     doc.build(content)
     print(f"PDF-документ '{pdf_filename}' успешно создан!")
 
-    cleanup_old_files(user_id, max_files=3)
+    cleanup_old_files(user_id, max_pdf_files=2, max_images=5)
 
     main.bot.send_message(user_id, "PDF успешно создан, сейчас вышлем, оцените:")
     main.bot.send_document(user_id, open(pdf_filename, "rb"))

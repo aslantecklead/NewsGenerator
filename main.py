@@ -107,7 +107,7 @@ def generate_document(user_id):
         url = selected_news['link']
         news_parser.parse_news(url, user_id)
     else:
-        bot.send_message(user_id, "Новость не найдена. Попробуйте ещё раз.")
+        bot.send_message(user_id, "Новость не найдена. Попробуйте ещё раз!")
 
 @bot.message_handler(content_types=['text'])
 def choose_option(message):
@@ -128,11 +128,10 @@ def choose_option(message):
 def run_bot():
     bot.polling(none_stop=True)
 
-
 if __name__ == '__main__':
     import uvicorn
 
     bot_thread = threading.Thread(target=run_bot)
     bot_thread.start()
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)

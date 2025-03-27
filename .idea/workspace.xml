@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="tg bot ui">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smpt_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/21455672ccfb11070d86cfc19154db99.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/8ce4c776522c2b50cd7bda18abcfe682.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/banner_188_small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/df1ae6ae7fcf486fdf2bc7f599c65c97.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/news_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_131644.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_132034.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_132237.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smpt_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/smpt_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,7 @@
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -51,28 +61,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "Python.backend.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator\fonts" />
@@ -80,7 +91,7 @@
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\resource" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="NewsGenerator" />
       <option name="ENV_FILES" value="" />
@@ -128,6 +139,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -173,6 +201,8 @@
       <workItem from="1742715853111" duration="9873000" />
       <workItem from="1742742736698" duration="4107000" />
       <workItem from="1742807256619" duration="2580000" />
+      <workItem from="1743002154490" duration="824000" />
+      <workItem from="1743054265084" duration="4135000" />
     </task>
     <task id="LOCAL-00001" summary="tg bot ui">
       <option name="closed" value="true" />
@@ -212,7 +242,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="tg bot ui" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1742811742713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
+    <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1743063620711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
     <SUITE FILE_PATH="coverage/NewsGenerator$backend.coverage" NAME="backend Coverage Results" MODIFIED="1742156629723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
     <SUITE FILE_PATH="coverage/FastAPIProject$main.coverage" NAME="main Coverage Results" MODIFIED="1742148821706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
