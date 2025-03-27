@@ -1,8 +1,6 @@
 import random
-import bs4
 from bs4 import BeautifulSoup
 import requests
-import os
 import main
 from pdf_generator import generatePdfFile
 

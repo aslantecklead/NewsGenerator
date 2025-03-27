@@ -1,7 +1,3 @@
-*.png
-*.img
-*.jpg
-*.pdf
-
-image_cache/*.jpg
-pdf_files/*
+.env
+/pdf_files
+/image_cache

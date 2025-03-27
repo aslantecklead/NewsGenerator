@@ -69,7 +69,6 @@ def generatePdfFile(title, body, image_url, timestamp, source, user_id):
     os.makedirs("pdf_files", exist_ok=True)
     os.makedirs("image_cache", exist_ok=True)
 
-    current_date = datetime.now().strftime("%d_%m_%Y")
     formatted_date = datetime.now().strftime("%d %B %Y года").replace("January", "января").replace("February",
                                                                                                    "февраля") \
         .replace("March", "марта").replace("April", "апреля").replace("May", "мая").replace("June", "июня") \
