@@ -52,9 +52,9 @@ async def fetch_news():
                     'date': date,
                     'image': 'https://rosguard.gov.ru' + image_url
                 })
-
     except requests.RequestException as e:
         print(f"Error during requests to {url}: {e}")
+    return filtered_news
 
 @app.get("/")
 async def connect():

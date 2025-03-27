@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="tg bot ui">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="max files limitation">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_cache/21455672ccfb11070d86cfc19154db99.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_cache/8ce4c776522c2b50cd7bda18abcfe682.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_cache/banner_188_small.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_cache/df1ae6ae7fcf486fdf2bc7f599c65c97.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_cache/news_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/2d3ccf95369e2baf62370dc770f510d1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_cache/ad6305ddffc19a030d5ed723ec91fdef.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_131644.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_132034.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250324_132237.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_files/news_730680190_20250327_111855.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smpt_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/smpt_client.py" afterDir="false" />
     </list>
@@ -30,8 +29,8 @@
       <list>
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -39,8 +38,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;aslantecklead&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;aslantecklead&quot;
   }
 }</component>
@@ -61,34 +64,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Python.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Docker.Dockerfile.executor": "Run",
+    "Python tests.pytest for tets_api.test_getNews_notNull.executor": "Run",
+    "Python tests.pytest for tets_api.test_get_news.executor": "Run",
+    "Python.backend.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "tests",
+    "last_opened_file_path": "C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator\fonts" />
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\resource" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
+      <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator\app" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -130,7 +140,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,9 +163,47 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="pytest for tests.test_api.test_getNews_notNull" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="NewsGenerator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_api.test_getNews_notNull&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_api.test_get_news" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="NewsGenerator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_api.test_get_news&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Python tests.pytest for tests.test_api.test_get_news" />
+        <item itemvalue="Python tests.pytest for tests.test_api.test_getNews_notNull" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +252,10 @@
       <workItem from="1742742736698" duration="4107000" />
       <workItem from="1742807256619" duration="2580000" />
       <workItem from="1743002154490" duration="824000" />
-      <workItem from="1743054265084" duration="4135000" />
+      <workItem from="1743054265084" duration="4299000" />
+      <workItem from="1743065314450" duration="991000" />
+      <workItem from="1743073753759" duration="5152000" />
+      <workItem from="1743081319326" duration="564000" />
     </task>
     <task id="LOCAL-00001" summary="tg bot ui">
       <option name="closed" value="true" />
@@ -222,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741099173217</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="max files limitation">
+      <option name="closed" value="true" />
+      <created>1743063783975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743063783975</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,11 +300,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tg bot ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="tg bot ui" />
+    <MESSAGE value="max files limitation" />
+    <option name="LAST_COMMIT_MESSAGE" value="max files limitation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1743063620711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
+    <SUITE FILE_PATH="coverage/NewsGenerator$pytest_for_tets_api_test_getNews_notNull.coverage" NAME="pytest for tets_api.test_getNews_notNull Coverage Results" MODIFIED="1743075856387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1743081587352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
     <SUITE FILE_PATH="coverage/NewsGenerator$backend.coverage" NAME="backend Coverage Results" MODIFIED="1742156629723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
+    <SUITE FILE_PATH="coverage/NewsGenerator$pytest_for_tets_api_test_get_news.coverage" NAME="pytest for tets_api.test_get_news Coverage Results" MODIFIED="1743075983690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/FastAPIProject$main.coverage" NAME="main Coverage Results" MODIFIED="1742148821706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

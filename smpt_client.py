@@ -5,7 +5,6 @@ from email.mime.application import MIMEApplication
 from email.header import Header
 from dotenv import load_dotenv
 import smtplib
-from datetime import datetime
 import main
 
 load_dotenv()
