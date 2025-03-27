@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="max files limitation">
+    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="pipeline file created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ci_pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/github_ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743063783975</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pipeline file created">
+      <option name="closed" value="true" />
+      <created>1743087883059</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743087883059</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +299,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tg bot ui" />
     <MESSAGE value="max files limitation" />
-    <option name="LAST_COMMIT_MESSAGE" value="max files limitation" />
+    <MESSAGE value="pipeline file created" />
+    <option name="LAST_COMMIT_MESSAGE" value="pipeline file created" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NewsGenerator$pytest_for_tets_api_test_getNews_notNull.coverage" NAME="pytest for tets_api.test_getNews_notNull Coverage Results" MODIFIED="1743075856387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
