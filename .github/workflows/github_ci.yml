@@ -1,0 +1,31 @@
+name: Deploy runner
+
+on:
+  push:
+    branches: ["main", "origin"]
+
+stages:
+  - build
+  - test
+  - deploy
+
+jobs:
+  build-job:
+    stage: build
+    runs-on: self-hosted
+    script:
+      - docker build -t news .
+
+  test-job:
+    stage: test
+    needs: build-job
+    runs-on: self-hosted
+    script:
+      - docker run --rm news pytest -s -v
+
+  deploy-job:
+    stage: deploy
+    needs: test-job
+    runs-on: self-hosted
+    script:
+      - docker compose up -d
