@@ -2,16 +2,11 @@ name: Deploy runner
 
 on:
   push:
-    branches: ["main", "origin"]
-
-stages:
-  - build
-  - test
-  - deploy
+    branches: ["main"]
 
 jobs:
   build-job:
-    stage: Build
+    name: Build
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
@@ -19,18 +14,18 @@ jobs:
         run: docker build -t news .
 
   test-job:
-    stage: Test
+    name: Test
     needs: build-job
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-      - name: Run tests
-        run: |
-          docker run --rm news
-          pytest -s -v
+      - name: Run container tests
+        run: docker run --rm news
+      - name: Run pytest
+        run: pytest -s -v
 
   deploy-job:
-    name: Deploy
+    name: Deploy Application
     needs: test-job
     runs-on: self-hosted
     steps:
