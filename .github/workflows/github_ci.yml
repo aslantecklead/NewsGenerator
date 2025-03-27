@@ -20,9 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run container tests
-        run: docker run --rm news
-      - name: Run pytest
-        run: pytest -s -v
+        run: |
+          docker run --rm news pytest -s -v
 
   deploy-job:
     name: Deploy Application
