@@ -11,22 +11,29 @@ stages:
 
 jobs:
   build-job:
-    stage: build
+    stage: Build
     runs-on: self-hosted
     steps:
-      - docker build -t news .
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t news .
 
   test-job:
-    stage: test
+    stage: Test
     needs: build-job
     runs-on: self-hosted
     steps:
-      - docker run --rm news
-      - pytest -s -v
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          docker run --rm news
+          pytest -s -v
 
   deploy-job:
-    stage: deploy
+    name: Deploy
     needs: test-job
     runs-on: self-hosted
     steps:
-      - docker compose up -d
+      - uses: actions/checkout@v4
+      - name: Deploy with Docker Compose
+        run: docker compose up -d
