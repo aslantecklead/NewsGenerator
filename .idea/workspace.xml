@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="ci test 5" />
+    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="ci test 5">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,6 +246,7 @@
       <workItem from="1743065314450" duration="991000" />
       <workItem from="1743073753759" duration="5152000" />
       <workItem from="1743081319326" duration="564000" />
+      <workItem from="1743153675231" duration="4034000" />
     </task>
     <task id="LOCAL-00001" summary="tg bot ui">
       <option name="closed" value="true" />
@@ -373,7 +377,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NewsGenerator$pytest_for_tets_api_test_getNews_notNull.coverage" NAME="pytest for tets_api.test_getNews_notNull Coverage Results" MODIFIED="1743075856387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1743083420942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
+    <SUITE FILE_PATH="coverage/NewsGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1743170013240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
     <SUITE FILE_PATH="coverage/NewsGenerator$backend.coverage" NAME="backend Coverage Results" MODIFIED="1742156629723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator" />
     <SUITE FILE_PATH="coverage/NewsGenerator$pytest_for_tets_api_test_get_news.coverage" NAME="pytest for tets_api.test_get_news Coverage Results" MODIFIED="1743075983690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/FastAPIProject$main.coverage" NAME="main Coverage Results" MODIFIED="1742148821706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
