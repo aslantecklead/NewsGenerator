@@ -1,7 +1,9 @@
 services:
   backend:
+    environment:
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
     image: news:latest
     container_name: news
     ports:
-      - "1252:8000"
+      - "80:8000"
     command: "python main.py"

@@ -4,14 +4,22 @@ on:
   push:
     branches: ["main"]
 
+env:
+  DOCKER_IMAGE: news
+
 jobs:
   build-job:
     name: Build
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: |
+          echo "SMTP_PASSWORD=${{ secrets.PASSWORD }}" > .env
+
       - name: Build Docker image
-        run: docker build -t news .
+        run: docker build -t $DOCKER_IMAGE .
 
   test-job:
     name: Test
@@ -19,15 +27,23 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-      - name: Run container tests
+      - name: Run tests
         run: |
-          docker run --rm news pytest -s -v
+          docker run --rm \
+            -e SMTP_PASSWORD="${{ secrets.PASSWORD }}" \
+            $DOCKER_IMAGE pytest -s -v
 
   deploy-job:
-    name: Deploy Application
+    name: Deploy
     needs: test-job
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy with Docker Compose
-        run: docker compose up -d
+
+      - name: Deploy
+        run: |
+          docker compose down
+          docker compose up -d
+
+      - name: Cleanup
+        run: rm -f .env
