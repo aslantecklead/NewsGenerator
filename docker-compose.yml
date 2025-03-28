@@ -3,5 +3,5 @@ services:
     image: news:latest
     container_name: news
     ports:
-      - "80:8000"
+      - "1252:8000"
     command: "python main.py"
