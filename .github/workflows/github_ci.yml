@@ -14,10 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create .env file
-        run: |
-          echo "SMTP_PASSWORD=${{ secrets.PASSWORD }}" > .env
-
       - name: Build Docker image
         run: docker build -t $DOCKER_IMAGE .
 
@@ -30,7 +26,7 @@ jobs:
       - name: Run tests
         run: |
           docker run --rm \
-            -e SMTP_PASSWORD="${{ secrets.PASSWORD }}" \
+            -e PASSWORD="${{ secrets.PASSWORD }}" \
             $DOCKER_IMAGE pytest -s -v
 
   deploy-job:
