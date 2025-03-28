@@ -25,7 +25,8 @@ jobs:
       - name: Run tests
         run: |
           docker run --rm \
-          pytest -s -v
+            $DOCKER_IMAGE \
+            sh -c "pytest -s -v"
 
   deploy-job:
     name: Deploy
