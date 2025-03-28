@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="changes docker compose posts" />
+    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="changes docker compose posts">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/github_ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/github_ci.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +62,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "tesr",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
