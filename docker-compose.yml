@@ -1,11 +1,7 @@
-version: '3.8'
-
 services:
   backend:
     image: news:latest
     container_name: news
     ports:
       - "80:8000"
-    environment:
-      - PASSWORD=${PASSWORD} 
     command: "python main.py"
