@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="222" />
+    <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="23">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/github_ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/github_ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -357,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743181938487</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="23">
+      <option name="closed" value="true" />
+      <created>1743182045241</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743182045241</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +399,8 @@
     <MESSAGE value="ci test 5" />
     <MESSAGE value="changes docker compose posts" />
     <MESSAGE value="222" />
-    <option name="LAST_COMMIT_MESSAGE" value="222" />
+    <MESSAGE value="23" />
+    <option name="LAST_COMMIT_MESSAGE" value="23" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NewsGenerator$pytest_for_tets_api_test_getNews_notNull.coverage" NAME="pytest for tets_api.test_getNews_notNull Coverage Results" MODIFIED="1743075856387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
