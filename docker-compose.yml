@@ -2,10 +2,6 @@ services:
   backend:
     image: news:latest
     container_name: news
-    environment:
-      - PASSWORD=${PASSWORD}
-    env_file:
-      - config.env
     ports:
       - "1252:8000"
     command: "python main.py"
