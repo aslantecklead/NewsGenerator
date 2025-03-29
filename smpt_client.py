@@ -37,7 +37,7 @@ def send_file(user_id, pdf_filename, email_subject, title, recipients_emails="ds
         main.bot.send_message(user_id, error)
         return
 
-    password = os.getenv('PASSWORD')
+    password = "uqpcreftdxpoqwih"
     if not password:
         error = "PASSWORD не загружен из .env!"
         print(error)
