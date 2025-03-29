@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6459854f-cbe0-4e70-a727-e11e280f924d" name="Changes" comment="hardcoded env variable for smpt password">
-      <change beforePath="$PROJECT_DIR$/smpt_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/smpt_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clean.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,32 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for tets_api.test_getNews_notNull.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for tets_api.test_get_news.executor&quot;: &quot;Run&quot;,
-    &quot;Python.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Docker.Dockerfile.executor": "Run",
+    "Makefile Target.del.executor": "Run",
+    "Python tests.pytest for tets_api.test_getNews_notNull.executor": "Run",
+    "Python tests.pytest for tets_api.test_get_news.executor": "Run",
+    "Python.backend.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/asalb/PycharmProjects/FastAPIProject/NewsGenerator/fonts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator\fonts" />
@@ -90,7 +95,13 @@
       <recent name="C:\Users\asalb\PycharmProjects\FastAPIProject\NewsGenerator\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Makefile Target.del">
+    <configuration name="del" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="del" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="NewsGenerator" />
       <option name="ENV_FILES" value="" />
@@ -190,6 +201,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile Target.del" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Python tests.pytest for tests.test_api.test_get_news" />
         <item itemvalue="Python tests.pytest for tests.test_api.test_getNews_notNull" />
@@ -246,7 +258,8 @@
       <workItem from="1743073753759" duration="5152000" />
       <workItem from="1743081319326" duration="564000" />
       <workItem from="1743153675231" duration="5774000" />
-      <workItem from="1743221861879" duration="2389000" />
+      <workItem from="1743221861879" duration="2901000" />
+      <workItem from="1743225337980" duration="1953000" />
     </task>
     <task id="LOCAL-00001" summary="tg bot ui">
       <option name="closed" value="true" />
@@ -416,11 +429,22 @@
       <option name="project" value="LOCAL" />
       <updated>1743224197700</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="hardcoded env variable for smpt password">
+      <option name="closed" value="true" />
+      <created>1743224293119</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743224293119</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ps1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

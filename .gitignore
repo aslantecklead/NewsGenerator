@@ -1,5 +1,7 @@
 .env
 .conf.env
+./build.ps1
+./clean.ps1
 /pdf_files
 /image_cache
 

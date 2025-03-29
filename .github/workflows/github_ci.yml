@@ -35,10 +35,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy
+      - name: Stop and remove existing container
         run: |
-          docker compose down
-          docker compose up -d
+          docker stop news || true
+          docker rm news || true
+
+      - name: Run new container
+        run: |
+          docker run -d \
+            -p 1252:8000 \
+            --env-file .env \
+            --rm \
+            --name news \
+            $DOCKER_IMAGE
 
       - name: Cleanup
         run: rm -f .env

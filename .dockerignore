@@ -1,1 +1,4 @@
 .venv1/
+./.git
+Dockerfile
+./.idea
