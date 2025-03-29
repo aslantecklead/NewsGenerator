@@ -1,4 +1,5 @@
 .env
+.conf.env
 /pdf_files
 /image_cache
 
